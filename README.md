@@ -104,11 +104,11 @@ Open in a browser to view detailed test results.
 | Scenario                 | Test Cases | Automated | Passed | Failed | Remarks                        |
 | ------------------------ | ---------- | --------- | ------ | ------ | ------------------------------ |
 | Homepage Navigation      | 3          | 3         | 1      | 2      | CAPTCHA blocked TC1.1 & 1.2 / Partially covered   |
-| Store & Product Browsing | 2          | 2         | 2      | 0      | Fully covered                  |
-| Coupons & Cashback       | 1          | 1         | 0      | 1      | CAPTCHA blocked flow           |
-| Cashback Flow            | 2          | 2         | 0      | 2      | CAPTCHA blocked automation     |
-| Account Management       | 4          | 4         | 0      | 4      | CAPTCHA blocked all operations |
-| **Total**                | 12         | 12        | 2      | 10     |                                |
+| Store & Product Browsing | 3          | 1 (Merged 3)         | 2      | 0      | Fully covered                  |
+| Coupons & Cashback       | 3          | 1 (Merged 3)         | 0      | 1      | CAPTCHA blocked flow           |
+| Cashback Flow            | 3          | 1 (Merged 3)         | 0      | 1      | CAPTCHA blocked automation     |
+| Account Management       | 3          | 1 (Merged 3)         | 0      | 1      | CAPTCHA blocked all operations |
+| **Total**                | 15         | 1 (Merged 3)         | 2      | 5      |                                |
 
 ---
 
