@@ -1,0 +1,20 @@
+{
+  "register": {
+    "email": "jehcihan@gmail.com",
+    "password": "jehc!h@n"
+  },
+  "login": {
+    "email": "jehcihan@gmail.com",
+    "password": "jehc!h@n"
+  },
+  "couponSearchTerm": "electronics",
+  "storeSearchTerm": "Lenovo",
+  "cashback": {
+    "email": "jayhan@gmail.com",
+    "password": "jayhansinan"
+  },
+  "cashbackFlow": {
+    "email": "amentii@gmail.com",
+    "password": "mehmedsec"
+  }
+}
