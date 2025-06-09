@@ -1,29 +1,10 @@
-# Node modules (always ignore)
+# Exclude node_modules
 node_modules/
 
-# Cypress test artifacts
-cypress/videos/
-cypress/screenshots/
+# Exclude downloads folder
+downloads/
 
-# VSCode settings
-.vscode/
-
-# OS files
-.DS_Store
-Thumbs.db
-
-# Environment files (if used)
-.env
-.env.local
-
-# Log files
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# Reports (optional, if you regenerate them)
-mochawesome-report/
-
-# Build or dist folders (if present)
-dist/
-build/
+# Exclude config and lock files
+package.json
+package-lock.json
+cypress.config.js

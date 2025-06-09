@@ -4,7 +4,7 @@ export class StoreProductBrowsing {
     // getSearchButton = '.chakra-button.css-1nbglha';
 
     //Rakuten wensite doesn't have an explicit filterring feature (for stores like amazon, apple or samsung but provides only for products) and it implicitly shows filtered search suggestions automatically showing stores related to user search and it is called implicit filtering. That's why i used this approach.
-    getFirstFromSuggestions = '.chakra-link.search-link.css-13dvr6w'; //type index 0
+    getFirstFromSuggestions = '.chakra-link.search-link.css-13dvr6w'; //type index 0 //.chakra-link.search-link.css-13dvr6w
     productSignInOverlay = '.chakra-modal__content.css-5v7fwa';
     closeOverlay = '.chakra-modal__close-btn.css-9mh91m';
     productTitle = '.css-q3y4w6';
@@ -24,7 +24,7 @@ export class StoreProductBrowsing {
 
     getProduct() {
         return cy.get(this.getFirstFromSuggestions).first()
-        .should('be.visible').and('have.text', 'Lenovo2.0% Online').click();
+        .should('be.visible').and('have.text', 'Lenovo10.0% Online').click();
     }
 
     signInOverlay() {

@@ -53,7 +53,8 @@ export class UserLoginAndAccount {
         // To change password
 
         cy.contains('Edit').eq(1).click();
-        cy.get('.chakra-modal__header.css-1mx5tm1').should('exist').should('be.visible');
+        cy.get('.chakra-modal__header.css-1mx5tm1')
+        .should('exist').should('be.visible');
 
         cy.get('#existingPassword').type('mehmedsec');
         cy.get('#password').type('muradsec');

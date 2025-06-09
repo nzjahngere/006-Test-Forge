@@ -20,13 +20,14 @@ export class HomePageRakuten {
     }
 
     clickJoinFree() {
-        return cy.get(this.joinFree, { timeout: 1000 }).should('exist')
-        .and('be.visible').click({multiple: true});
+        return cy.get(this.joinFree, { timeout: 1000 })
+        .should('exist').and('be.visible')
+        .click({multiple: true});
     }
 
     enterEmailAddress(emailAddress) {
-        return cy.get(this.emailAddress, { timeout: 1000 }).should('exist')
-        .and('be.visible').type(emailAddress);
+        return cy.get(this.emailAddress, { timeout: 1000 })
+        .should('exist').and('be.visible').type(emailAddress);
     }
 
     enterPassword(getPassword) {
@@ -131,160 +132,4 @@ export class HomePageRakuten {
             .eq(index).should('exist').and('be.visible').click({force: true});
     }
 }
-
-//myr@k010!d - test@gmail.com
-
-// ✅ Loop through all nav stores
-    /*clickAllNavStores() {
-        cy.get(this.navStores).each(($el, index) => {
-            if (index > 0) { // Skip index 0 if it's used for categories
-                cy.wrap($el).should('exist').and('be.visible').click();
-            }
-        });
-    }
-
-    // ✅ Loop through all coupons
-    seeSomeCoupons(limit = 3) {
-    cy.get(this.validateCoupons).each(($el, index) => {
-        if (index < limit) {
-            cy.wrap($el).should('exist').and('be.visible').click();
-        }
-    });
-}
-
-
-    // ✅ Loop through all cashback deals
-    seeSomeCBDeals(limit = 3) {
-    cy.get(this.cbDeals).each(($el, index) => {
-        if (index < limit) {
-            cy.wrap($el).should('exist').and('be.visible').click();
-        }
-    });
-}*/
-
-
-
-    /* validateCategoriesPresence = '.css-cf3le8'; // index = 0
-    searchBar = '#term';
-    searchButton = '.chakra-button.css-1nbglha';
-
-    // Validating navbar items
-
-    navStore1 = '.css-cf3le8'; // index = 1
-    navStore2 = '.css-cf3le8'; // index = 2
-    navStore3 = '.css-cf3le8'; // index = 3
-    navStore4 = '.css-cf3le8'; // index = 4
-    navStore5 = '.css-cf3le8'; // index = 5
-    navStore6 = '.css-cf3le8'; // index = 6
-    navStore7 = '.css-cf3le8'; // index = 7
-    navStore8 = '.css-cf3le8'; // index = 8
-
-    navLink = '.chakra-button.css-79zxaj';
-
-    // Validating coupons & deals
-
-    validateCoupan1 = '.css-1rn30ri';
-    validateCoupan2 = '.css-1rn30ri';
-    validateCoupan3 = '.css-1rn30ri';
-
-    cbDeals1 = 'css-8n1z4v';
-    cbDeals2 = 'css-8n1z4v';
-    cbDeals3 = 'css-8n1z4v';
-
-    
-
-    seeCategories() {
-        return cy.get(this.validateCategoriesPresence).should('exist')
-        .and('be.visible').click();
-    }
-
-    seeSearchBar(searchBar) {
-        return cy.get(this.searchBar).should('exist')
-        .and('be.visible').type(searchBar);
-    }
-
-    seeSearchButton() {
-        return cy.get(this.searchButton).should('exist')
-        .and('be.visible').click();
-    }
-
-    // Validating navbar items
-
-
-    clickNavStore1() {
-        return cy.get(this.navStore1).should('exist')
-        .and('be.visible').click();
-    }
-
-    clickNavStore2() {
-        return cy.get(this.navStore2).should('exist')
-        .and('be.visible').click();
-    }
-
-    clickNavStore3() {
-        return cy.get(this.navStore3).should('exist')
-        .and('be.visible').click();
-    }
-
-    clickNavStore4() {
-        return cy.get(this.navStore4).should('exist')
-        .and('be.visible').click();
-    }
-
-    clickNavStore5() {
-        return cy.get(this.navStore5).should('exist')
-        .and('be.visible').click();
-    }
-
-    clickNavStore6() {
-        return cy.get(this.navStore6).should('exist')
-        .and('be.visible').click();
-    }
-
-    clickNavStore7() {
-        return cy.get(this.navStore7).should('exist')
-        .and('be.visible').click();
-    }
-
-    clickNavStore8() {
-        return cy.get(this.navStore8).should('exist')
-        .and('be.visible').click();
-    }
-
-    clickNavLink() {
-        return cy.get(this.navLink).should('exist')
-        .and('be.visible').click();
-    }
-
-    // Validating coupons & deals 
-
-    seeCoupon1() {
-        return cy.get(this.validateCoupan1).should('exist')
-        .and('be.visible').click();
-    }
-
-    seeCoupon2() {
-        return cy.get(this.validateCoupan2).should('exist')
-        .and('be.visible').click();
-    }
-
-    seeCoupon3() {
-        return cy.get(this.validateCoupan3).should('exist')
-        .and('be.visible').click();
-    }
-
-    seeCBDeals1() {
-        return cy.get(this.cbDeals1).should('exist')
-        .and('be.visible').click();
-    }
-
-    seeCBDeals2() {
-        return cy.get(this.cbDeals2).should('exist')
-        .and('be.visible').click();
-    }
-
-    seeCBDeals3() {
-        return cy.get(this.cbDeals3).should('exist')
-        .and('be.visible').click();
-    } */
 

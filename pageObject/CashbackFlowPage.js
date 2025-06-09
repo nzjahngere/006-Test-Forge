@@ -34,7 +34,7 @@ export class CashbackFlowPage {
         cy.get(this.selectProduct).first().then(($e)=>{
                 cy.wrap($e).should('be.visible').debug()
             })
-            cy.get(this.selectProduct).first().invoke('removeAttr', 'target').click();
+            cy.get(this.selectProduct).eq(0).invoke('removeAttr', 'target').click();
     }
 
     typeTheEmail(emailID) {
