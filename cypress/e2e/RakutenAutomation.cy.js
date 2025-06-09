@@ -4,7 +4,7 @@ import { CouponsAndCashback } from '../../pageObject/CouponsAndCashback';
 import { CashbackFlowPage } from '../../pageObject/CashbackFlowPage';
 import { UserLoginAndAccount } from '../../pageObject/UserLoginAndAccount';
 
-describe('Homepage Navigation', () => {
+describe('Scenario 1: Homepage Navigation', () => {
   const RakutenHome = new HomePageRakuten();
   let userData;
 
@@ -84,7 +84,7 @@ describe('Homepage Navigation', () => {
   });
 });
 
-describe('Store & Product Browsing', () => {
+describe('Scenario 2: Store & Product Browsing', () => {
   const RakuStore = new StoreProductBrowsing();
   let userData;
 
