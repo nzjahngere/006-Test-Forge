@@ -1,10 +1,15 @@
 # Exclude node_modules
 node_modules/
 
-# Exclude downloads folder
-downloads/
-
 # Exclude config and lock files
 package.json
 package-lock.json
 cypress.config.js
+
+# explicitly include the cypress fixtures and e2e folders
+!cypress/fixtures/
+!cypress/fixtures/**
+!cypress/e2e/
+!cypress/e2e/**
+
+
