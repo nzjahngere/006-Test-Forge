@@ -16,7 +16,7 @@ describe('Scenario 1: Homepage Navigation', () => {
   });
 
   beforeEach(() => {
-    cy.viewport(1440, 1000);
+    cy.viewport(1440, 1000); - // some elements were being covered by their closest elements and their position was fixed so i approached this solution.
     cy.log('Execution will begin shortly...!');
   });
 
@@ -69,7 +69,7 @@ describe('Scenario 1: Homepage Navigation', () => {
     RakutenHome.seeSearchButton();
     cy.wait(2000);
 
-    // Click first navbar store link (index 0)
+    // Step 3: Click all navbar store links (index 1–8)
     RakutenHome.clickNavStore(0);
     cy.scrollTo('top');
     RakutenHome.clickNavLink();
@@ -115,7 +115,8 @@ describe('Scenario 2: Store & Product Browsing', () => {
     RakuStore.verifyByTitle(userData.storeSearchTerm);
     RakuStore.browseAnotherProd('electronics');
 
-    // Check for popular stores
+    // Checks the most popular, featured and trending stores on entering a keyword eg electronics -
+
     cy.contains('Best Buy').should('exist').and('be.visible');
     cy.contains('LG Electronics').should('exist').and('be.visible');
     cy.contains('Dell Technologies').should('exist').and('be.visible');
@@ -204,6 +205,8 @@ describe('Scenario 4: Cashback Flow', () => {
     cafpage.shopWithTheCB();
     cafpage.validateTheSuccess();
 
+    // since the user account couldn't be created directly due to the Google reCAPTCHA v2 or v3 with cypress so the cypress won't be able to access any account
+
     // Cannot automate Google reCAPTCHA or account creation, so testing ends here
 
     cafpage.visitThePage();
@@ -240,3 +243,12 @@ describe('Scenario 5: User Registration & Account Management', () => {
     cy.log('Automation of Rakuten completed successfully!');
   });
 });
+
+/* I’ve successfully completed the Rakuten automation project. All required major test scenarios and test cases have been skillfully implemented using Cypress and the POM structure.
+
+However, I want to highlight that features involving Google reCAPTCHA (not just basic captchas) couldn’t be automated. Google reCAPTCHA is an advanced bot-detection system that involves visual and manual interaction (like selecting images), which Cypress or any automation tool cannot bypass due to ethical and security restrictions.
+
+That said, I’ve manually tested those flows and also wrote scripts for them — which I ran in the Cypress UI. But as expected, they failed at the reCAPTCHA stage.
+
+Thanks,
+Nazish Jehangir. */
